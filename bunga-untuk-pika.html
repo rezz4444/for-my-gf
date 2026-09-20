@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Untuk Kamu</title>
+  <style>
+   body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(160deg, #ffd6e8, #fff5f8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+   .glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,105,180,0.6), rgba(255,105,180,0) 70%);
+  filter: blur(20px);
+  border-radius: 50%;
+  animation: nyala 2.5s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes nyala {
+  from { opacity: 0.5; transform: scale(0.9); }
+  to   { opacity: 1;   transform: scale(1.1); }
+}
+
+   .bunga {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+}
+
+.kelopak {
+  position: absolute;
+  width: 50px;
+  height: 80px;
+  background: #ff8fab;
+  border-radius: 50%;
+  top: 20px;
+  left: 75px;
+  transform-origin: 50% 80px;
+  animation: mekar 0.6S ease-out forwards;
+}
+@keyframes mekar {
+  from { transform: scale(0) rotate(var(--r)); }
+  to   { transform: scale(1) rotate(var(--r)); }
+
+}
+
+ .kelopak:nth-child(1) { --r: 0deg;   animation-delay: 0s; }
+   .kelopak:nth-child(2) { --r: 60deg;  animation-delay: 0.1s; }
+   .kelopak:nth-child(3) { --r: 120deg; animation-delay: 0.2s; }
+   .kelopak:nth-child(4) { --r: 180deg; animation-delay: 0.3s; }
+   .kelopak:nth-child(5) { --r: 240deg; animation-delay: 0.4s; }
+   .kelopak:nth-child(6) { --r: 300deg; animation-delay: 0.5s; }
+.tengah {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #ffd54f;
+  border-radius: 50%;
+  top: 85px;
+  left: 85px;
+  z-index: 1;
+}
+
+h1 {
+  position: relative;
+  z-index: 1;
+}
+  </style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="bunga">
+    <div class="kelopak"></div>
+    <div class="kelopak"></div>
+    <div class="kelopak"></div>
+    <div class="kelopak"></div>
+    <div class="kelopak"></div>
+    <div class="kelopak"></div>
+  <div class="tengah"></div>
+</div>
+<h1 style="color: #d6336c; font-family: sans-serif; margin-top: 40px;">
+  I LOVE U PIKAA 🌸
+</h1>
+</body>
+</html>
